@@ -5,9 +5,9 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "@/css/theme";
 
+import { Grid, Typography, Box } from "@mui/material";
 import Header from "@/app/_components/header/Header";
-import Hedaer2 from "@/app/_components/header/Header copy";
-import Footer from "app/_components/footer/Footer";
+import SideNav from "./_components/sideNav";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,10 +25,11 @@ export default function RootLayout({
         <body>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Hedaer2 />
-            {/* <Header /> */}
-            {children}
-            <Footer />
+            <Header />
+            <Grid container height={"100vh"}>
+              <SideNav />
+              {children}
+            </Grid>
           </ThemeProvider>
         </body>
       </AppRouterCacheProvider>
