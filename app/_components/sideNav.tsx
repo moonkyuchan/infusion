@@ -5,29 +5,7 @@ import { Grid, ListItemButton, ListItemText } from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
 import Link from "next/link";
 
-interface InfusionTitleType {
-  id: number;
-  name: string;
-  path: string;
-}
-
-const infusionTitle: InfusionTitleType[] = [
-  {
-    id: 1,
-    name: "1번 수액실",
-    path: "/room1",
-  },
-  {
-    id: 2,
-    name: "2번 수액실",
-    path: "/room2",
-  },
-  {
-    id: 3,
-    name: "3번 수액실",
-    path: "/room3",
-  },
-];
+import { infusionTitle } from "../lib/data";
 
 export default function SideNav() {
   const [focus, setFocus] = useState(1);

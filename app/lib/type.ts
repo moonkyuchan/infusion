@@ -6,3 +6,9 @@ export type ButtonTypes = {
   style?: CSSProperties;
   children: React.ReactNode;
 };
+
+export interface InfusionTitleType {
+  id: number;
+  name: string;
+  path: string;
+}
