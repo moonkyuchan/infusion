@@ -1,25 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import {
-  Grid,
-  ListItemButton,
-  ListItemText,
-  Box,
-  CardActionArea,
-  Card,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
 
-import ClientCard from "../card/card";
+import ClientCard from "../card/clientCard";
 
 export default function Dashboard() {
   return (
-    <Grid xs={8}>
-      <Box width={"100%"} padding={"30px"}>
-        <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          {Array.from({ length: 9 }).map((_, idx) => (
+    <Grid>
+      <Box padding={"30px"}>
+        <Grid container rowSpacing={4} columnSpacing={3}>
+          {Array.from({ length: 12 }).map((_, idx) => (
             <Grid item key={idx} xs={4}>
               <ClientCard />
             </Grid>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import { Grid, ListItemButton, ListItemText } from "@mui/material";
+import { Grid, ListItemButton, ListItemText, Box } from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
 import Link from "next/link";
 
@@ -17,15 +17,15 @@ export default function SideNav() {
 
   return (
     <Grid
-      item
-      xs={2}
-      height={"100%"}
+      flexDirection={"column"}
       sx={{
+        padding: "20px 10px",
         backgroundColor: theme.palette.grey[100],
-        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.2)",
+        height: "100%",
       }}
     >
-      <StyledNav>
+      <Grid>
         {infusionTitle.map((ele) => (
           <React.Fragment key={ele.id}>
             <Link href={ele.path} passHref style={{ textDecoration: "none" }}>
@@ -46,14 +46,10 @@ export default function SideNav() {
             </Link>
           </React.Fragment>
         ))}
-      </StyledNav>
+      </Grid>
     </Grid>
   );
 }
-
-const StyledNav = styled("nav")(({ theme }) => ({
-  padding: "20px 10px",
-}));
 
 const StyledListButton = styled(ListItemButton)<{ selected: boolean }>(
   ({ theme, selected }) => ({

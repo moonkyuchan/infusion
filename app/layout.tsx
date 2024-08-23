@@ -5,7 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "@/css/theme";
 
-import { Grid, Typography, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import Header from "@/app/_components/header/Header";
 import SideNav from "./_components/sideNav";
 
@@ -26,9 +26,13 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
-            <Grid container height={"100vh"}>
-              <SideNav />
-              {children}
+            <Grid container height={"100vh"} wrap="nowrap">
+              <Grid item xs={2} minWidth={220}>
+                <SideNav />
+              </Grid>
+              <Grid item xs={10}>
+                {children}
+              </Grid>
             </Grid>
           </ThemeProvider>
         </body>
