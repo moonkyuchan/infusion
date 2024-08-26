@@ -26,7 +26,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
-            <Grid container height={"100vh"} wrap="nowrap">
+            <Grid container height={"calc(100vh - 120px)"} wrap="nowrap">
               <Grid item xs={2} minWidth={220}>
                 <SideNav />
               </Grid>

@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
 
-import LinearProgressWithLabel from "../progressBar/progressBar";
+import LinearProgressWithLabel from "./progressBar/progressBar";
 
 export default function ClientCard() {
   const theme = useTheme();
