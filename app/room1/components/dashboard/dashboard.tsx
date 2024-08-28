@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Grid, Box } from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
 
-import ClientCard from "../clientCard/clientCard";
+import ClientCard from "../clientCard/ClientCard";
 
 export default function Dashboard() {
   return (

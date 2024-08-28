@@ -1,6 +1,6 @@
 import { Grid, Box, Divider, Container } from "@mui/material";
 
-import Routine from "./_components/routine/routine";
+import Info from "./components/info/Info";
 
 export default function RoomLayout({
   children,
@@ -13,7 +13,7 @@ export default function RoomLayout({
         {children}
       </Grid>
       <Grid item xs={4} minWidth={300}>
-        <Routine />
+        <Info />
       </Grid>
     </Grid>
   );

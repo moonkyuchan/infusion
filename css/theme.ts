@@ -1,9 +1,9 @@
 "use client";
 
 import { fontPretendard } from "./font";
-import { createTheme, ThemeOptions } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
-const theme = createTheme({
+export const theme = createTheme({
   components: {
     MuiAppBar: {
       styleOverrides: {
@@ -31,12 +31,8 @@ const theme = createTheme({
     },
   },
   typography: {
-    h8: {
-      fontSize: "16px",
-      fontWeight: 400, // 원하는 폰트 두께 설정
-    },
     fontFamily: fontPretendard.style.fontFamily,
-  } as ThemeOptions["typography"],
+  },
   palette: {
     primary: {
       main: "#00A9E4",

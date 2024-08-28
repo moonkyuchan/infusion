@@ -8,12 +8,13 @@ import {
   Typography,
   Divider,
   CardActions,
+  CardActionArea,
   Button,
   Grid,
 } from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
 
-import LinearProgressWithLabel from "./progressBar/progressBar";
+import LinearProgressWithLabel from "./progressBar/ProgressBar";
 
 export default function ClientCard() {
   const theme = useTheme();
@@ -32,32 +33,34 @@ export default function ClientCard() {
 
   return (
     <StyledCardWrap>
-      <CardContent>
-        <Grid container direction={"column"} alignItems={"center"} gap={1}>
-          <Grid
-            container
-            direction={"row"}
-            alignItems={"center"}
-            justifyContent={"space-around"}
-            sx={{ borderBottom: `1px solid ${theme.palette.grey[200]}` }}
-          >
-            <Grid item xs={1}>
-              <Typography variant="h4" fontWeight={800}>
-                1
-              </Typography>
+      <CardActionArea>
+        <CardContent>
+          <Grid container direction={"column"} alignItems={"center"} gap={1}>
+            <Grid
+              container
+              direction={"row"}
+              alignItems={"center"}
+              justifyContent={"space-around"}
+              sx={{ borderBottom: `1px solid ${theme.palette.grey[200]}` }}
+            >
+              <Grid item xs={1}>
+                <Typography variant="h4" fontWeight={800}>
+                  1
+                </Typography>
+              </Grid>
+              <Divider orientation="vertical" variant="middle" flexItem />
+              <Grid item xs={8}>
+                <Typography variant="h5" letterSpacing={2} fontWeight={600}>
+                  문규찬
+                </Typography>
+              </Grid>
             </Grid>
-            <Divider orientation="vertical" variant="middle" flexItem />
-            <Grid item xs={8}>
-              <Typography variant="h5" letterSpacing={2} fontWeight={600}>
-                문규찬
-              </Typography>
-            </Grid>
+            <Box sx={{ width: "100%" }}>
+              <LinearProgressWithLabel value={progress} />
+            </Box>
           </Grid>
-          <Box sx={{ width: "100%" }}>
-            <LinearProgressWithLabel value={progress} />
-          </Box>
-        </Grid>
-      </CardContent>
+        </CardContent>
+      </CardActionArea>
       <CardActions sx={{ borderTop: `1px solid ${theme.palette.grey[200]}` }}>
         <Box
           sx={{

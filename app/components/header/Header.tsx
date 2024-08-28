@@ -3,7 +3,6 @@
 import * as React from "react";
 import { Grid, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import Image from "next/image";
 
 function Header() {
   const theme = useTheme();

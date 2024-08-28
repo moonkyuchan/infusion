@@ -4,10 +4,10 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "@/css/theme";
-
 import { Grid } from "@mui/material";
-import Header from "@/app/_components/header/Header";
-import SideNav from "./_components/sideNav";
+
+import Header from "@/app/components/header/Header";
+import SideNav from "./components/SideNav";
 
 export const metadata: Metadata = {
   title: "Create Next App",

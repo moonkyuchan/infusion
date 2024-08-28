@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useTheme, styled } from "@mui/material/styles";
 import Link from "next/link";
 
-import Dashboard from "./_components/dashboard/dashboard";
+import Dashboard from "./components/dashboard/dashboard";
 
 export default function Page() {
   return <Dashboard />;
