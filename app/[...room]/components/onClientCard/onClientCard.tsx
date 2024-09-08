@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
+import { useRecoilState } from "recoil";
+import { clientAtom } from "@/recoil/atom/clientAtom";
 import {
   Box,
   Card,
@@ -16,9 +18,10 @@ import { useTheme, styled } from "@mui/material/styles";
 
 import LinearProgressWithLabel from "./progressBar/ProgressBar";
 
-export default function ClientCard() {
+export default function OnClientCard({ data }: any) {
   const theme = useTheme();
   const [progress, setProgress] = useState(10);
+  const [atomClient, setAtomClient] = useRecoilState(clientAtom);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,10 +34,14 @@ export default function ClientCard() {
     };
   }, []);
 
+  const handleCard = (data: any) => {
+    setAtomClient(data);
+  };
+
   return (
     <StyledCardWrap>
       <CardActionArea>
-        <CardContent>
+        <CardContent onClick={() => handleCard(data)}>
           <Grid container direction={"column"} alignItems={"center"} gap={1}>
             <Grid
               container
@@ -45,13 +52,13 @@ export default function ClientCard() {
             >
               <Grid item xs={1}>
                 <Typography variant="h4" fontWeight={800}>
-                  1
+                  {data.key}
                 </Typography>
               </Grid>
               <Divider orientation="vertical" variant="middle" flexItem />
               <Grid item xs={8}>
                 <Typography variant="h5" letterSpacing={2} fontWeight={600}>
-                  문규찬
+                  {data.name}
                 </Typography>
               </Grid>
             </Grid>

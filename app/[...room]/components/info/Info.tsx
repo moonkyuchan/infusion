@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { useState } from "react";
 import {
@@ -14,6 +15,9 @@ import {
 } from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
 
+import { useRecoilState } from "recoil";
+import { clientAtom } from "@/recoil/atom/clientAtom";
+
 const rows = [
   { id: 1, name: "남은시간", value: "11:02:34" },
   ,
@@ -25,6 +29,8 @@ const rows = [
 
 export default function Info() {
   const theme = useTheme();
+  const [atomClient, setAtomClient] = useRecoilState(clientAtom);
+  console.log(atomClient, "????");
   return (
     <Grid
       justifyContent={"center"}
