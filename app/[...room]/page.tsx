@@ -1,30 +1,26 @@
 import React from "react";
-import { useState } from "react";
-import { Grid, Box, Divider, Container } from "@mui/material";
-import { usePathname } from "next/navigation";
-import { useTheme, styled } from "@mui/material/styles";
-import Link from "next/link";
+import { Grid, Box } from "@mui/material";
 
 import OnClientCard from "./components/onClientCard/onClientCard";
 import OffClientCard from "./components/offClientCard/offClientCard";
 
 const mockData = [
-  { key: 1, name: "문규찬", num: "123456", routine: "IV200", onOff: true },
-  { key: 2, name: "이기호", num: "123456", routine: "IV200", onOff: true },
+  { key: 1, name: "문규찬", num: "42423", routine: "IV200", onOff: true },
+  { key: 2, name: "이기호", num: "16235", routine: "IV200", onOff: true },
   ,
-  { key: 3, name: "양영상", num: "123456", routine: "IV200", onOff: true },
+  { key: 3, name: "양영상", num: "123216", routine: "IV200", onOff: true },
   ,
-  { key: 4, name: "이강희", num: "123456", routine: "IV200", onOff: true },
+  { key: 4, name: "이강희", num: "1226", routine: "IV200", onOff: true },
   ,
-  { key: 5, name: "서효민", num: "123456", routine: "IV200", onOff: false },
+  { key: 5, name: "서효민", num: "1444456", routine: "IV200", onOff: false },
   ,
-  { key: 6, name: "최유진", num: "123456", routine: "IV200", onOff: true },
+  { key: 6, name: "최유진", num: "125656", routine: "IV200", onOff: true },
   ,
-  { key: 7, name: "한태희", num: "123456", routine: "IV200", onOff: false },
-  { key: 8, name: "성혜진", num: "123456", routine: "IV200", onOff: true },
-  { key: 9, name: "조상우", num: "123456", routine: "IV200", onOff: false },
-  { key: 10, name: "곽희붕", num: "123456", routine: "IV200", onOff: true },
-  { key: 11, name: "김형준", num: "123456", routine: "IV200", onOff: false },
+  { key: 7, name: "한태희", num: "23456", routine: "IV200", onOff: false },
+  { key: 8, name: "성혜진", num: "623456", routine: "IV200", onOff: true },
+  { key: 9, name: "조상우", num: "3456", routine: "IV200", onOff: false },
+  { key: 10, name: "곽희붕", num: "53656", routine: "IV200", onOff: true },
+  { key: 11, name: "김형준", num: "1456234", routine: "IV200", onOff: false },
   ,
 ];
 
